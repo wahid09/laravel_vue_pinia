@@ -3,6 +3,7 @@ import home from './pages/Home.vue';
 import login from './pages/Login.vue';
 import register from './pages/Register.vue';
 import dashboard from './pages/Dashboard.vue';
+import logout from './pages/Logout.vue';
 
 const routes = [
     {
@@ -26,6 +27,12 @@ const routes = [
         path: '/dashboard',
         name: 'Dashboard',
         component: dashboard,
+        meta: { requiresAuth: true }
+    },
+    {
+        path: '/logout',
+        name: 'Logout',
+        component: logout,
         meta: { requiresAuth: true }
     }
 ];
